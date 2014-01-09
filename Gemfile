@@ -1,17 +1,16 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
+#source 'https://rubygems.org'
 
 gem 'rails', '4.0.1'
 
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.13'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
-#twitter bootstrap
-gem 'therubyracer', platforms: :ruby
-gem 'less-rails'
-gem 'twitter-bootstrap-rails'
+#foundation
+gem "zurb-foundation", "~> 4.3.2"
 
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
