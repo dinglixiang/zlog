@@ -8,7 +8,7 @@ development:
   database: zlog_development
   host: localhost
   username: root
-  password:
+  password: "123456"
   encoding: utf8
   reconnect: false
   pool: 5
@@ -23,7 +23,7 @@ test:
   reconnect: false
   encoding: utf8
   username: root
-  password:
+  password: "123456"
   host: localhost
   pool: 5
   timeout: 5000
@@ -34,7 +34,7 @@ production:
   reconnect: false
   encoding: utf8
   username: root
-  password:
+  password: "123456"
   host: localhost
   pool: 5
   timeout: 5000
