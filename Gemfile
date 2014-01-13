@@ -10,7 +10,11 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 #foundation
-gem "zurb-foundation", "~> 4.3.2"
+#gem "zurb-foundation", "~> 4.3.2"
+#gem 'foundation-rails'
+
+#bootstrap
+gem 'bootstrap-sass', '~> 3.0.3.0'
 
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
