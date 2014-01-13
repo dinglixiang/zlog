@@ -1,1 +1,12 @@
-<h1>List Topics </h1>
+
+<% @topics.each do |topic| %>
+
+      <article>
+        <h3><%= link_to topic.title, topic %></h3>
+        <h6><small>Written by <a href="#">Lixiang Ding</a> on <%= topic.created_at.strftime("%b %d, %Y")%>.</small></h6>
+
+        <p><%= topic.content %></p> 
+      </article>
+      <hr />
+
+<% end %>
