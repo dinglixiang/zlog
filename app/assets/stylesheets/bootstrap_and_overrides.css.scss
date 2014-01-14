@@ -1,0 +1,34 @@
+@import "bootstrap";
+
+.navbar-default {
+  background-color: #d8cdb4;
+  border-color: #cdbe9e;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+color: #555;
+background-color: #cdbe9e;
+}
+
+.navbar-default .navbar-brand {
+color: #fff;
+text-shadow: 1px 1px 0 rgba(0,0,0,.2);
+}
+
+.kickstrap-logo {
+font-family: kickstrap_logo-regular;
+margin-left: 5px;
+}
+
+.navbar-default .navbar-nav > li > a {
+color: #a08853;
+}
+
+
+#sf-wrap {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -50px;
+padding: 0 0 50px;
+}
