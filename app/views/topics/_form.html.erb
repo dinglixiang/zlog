@@ -1,3 +1,4 @@
+<div class="form">
 <%= form_for @topic do |f| %>
   <p>
     <%= f.label :title %><br>
@@ -6,10 +7,11 @@
  
   <p>
     <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, class: "ckeditor" %>
   </p>
  
   <p>
     <%= f.submit %>
   </p>
 <% end %>
+</div>

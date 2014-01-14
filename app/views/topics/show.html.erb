@@ -1,11 +1,14 @@
-<p>
-  <strong>Title:</strong>
-  <%= @topic.title %>
-</p>
+<div class="col-xs-9">
+<div class="topic_title" align="center">
+	<p>  <%= @topic.title %></p>
+</div>
  
-<p>
-  <strong>Content:</strong>
+<div class="topic_content">
+ <p>
   <%= @topic.content %>
 </p>
+</div>
 
 <%= link_to 'Back', topics_path %>
+<hr>
+</div>
