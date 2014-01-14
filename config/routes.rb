@@ -1,4 +1,5 @@
 Zlog::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   root "topics#index"
   resources :topics
   
