@@ -25,16 +25,16 @@ namespace :deploy do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
     task command, :roles => :app, except: {no_release: true} do
-      run "#{sudo :as => 'ding'} /etc/init.d/unicorn_#{application} #{command}"
+      run "/etc/init.d/unicorn_#{application} #{command}"
     end
   end
  
   desc "things I need to do after deploy:setup"
   task :setup_config, :roles => :app do
     run "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
-    run "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
-    put File.read("config/database.yml.example"), "#{shared_path}/config/database.yml"
+    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}. create db"
   end
   after "deploy:setup", "deploy:setup_config"
