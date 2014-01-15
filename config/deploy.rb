@@ -9,6 +9,7 @@ set :port, 22
 set :use_sudo,false 
 set :deploy_to, "/var/www/#{application}"
 set :deploy_via, :remote_cache
+set :rvm_type, :system
 
 set :repository,  "git@github.com:dinglixiang/zlog.git"
 set :scm, :git
@@ -24,7 +25,7 @@ namespace :deploy do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
     task command, :roles => :app, except: {no_release: true} do
-      run "/etc/init.d/unicorn_#{application} #{command}"
+      run "#{sudo :as => 'ding'} /etc/init.d/unicorn_#{application} #{command}"
     end
   end
  
