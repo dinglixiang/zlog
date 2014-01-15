@@ -7,7 +7,7 @@ if Object.const_defined?("Ckeditor")
     # available as additional gems.
     require "ckeditor/orm/active_record"
 
-    config.assets_plugins = ['image', 'smiley']
+    #config.assets_plugins = ['image', 'smiley']
 
     # Allowed image file types for upload.
     # Set to nil or [] (empty array) for all file types
