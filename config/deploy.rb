@@ -25,13 +25,13 @@ namespace :deploy do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
     task command, :roles => :app, except: {no_release: true} do
-      run "/etc/init.d/unicorn_#{application} #{command}"
+      sudo "/etc/init.d/unicorn_#{application} #{command}"
     end
   end
  
   desc "things I need to do after deploy:setup"
   task :setup_config, :roles => :app do
-    run "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
     put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}. create db"
@@ -43,11 +43,11 @@ namespace :deploy do
   end
   after "deploy:finalize_update", "deploy:symlink_config"
  
-  #desc 'copy ckeditor nondigest assets'
-  #task :copy_nondigest_assets, roles: :app do
-      #run "cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} ckeditor:create_nondigest_assets"
-  #end
-  #after 'deploy:assets:precompile', 'copy_nondigest_assets'
+  desc 'copy ckeditor nondigest assets'
+  task :copy_nondigest_assets, roles: :app do
+      run "cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} ckeditor:create_nondigest_assets"
+  end
+  after 'deploy:assets:precompile', 'copy_nondigest_assets'
 
   desc "Make sure local git is in sync with remote."
   task :check_revision, roles: :web do

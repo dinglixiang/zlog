@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem "ckeditor"
 gem "carrierwave"
 gem "mini_magick"
+gem "non-stupid-digest-assets"
 #foundation
 #gem "zurb-foundation", "~> 4.3.2"
 #gem 'foundation-rails'
