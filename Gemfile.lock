@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/dinglixiang/ckeditor.git
+  revision: f7c706776521a43c1beb70fcd3161121af8900d4
+  specs:
+    ckeditor (4.0.6)
+      mime-types
+      orm_adapter
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,9 +47,6 @@ GEM
     carrierwave (0.7.1)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
-    ckeditor (4.0.4)
-      mime-types
-      orm_adapter
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -79,7 +84,7 @@ GEM
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
     non-stupid-digest-assets (1.0.2)
-    orm_adapter (0.4.0)
+    orm_adapter (0.5.0)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -146,7 +151,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.0.3.0)
   capistrano
   carrierwave
-  ckeditor
+  ckeditor!
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails

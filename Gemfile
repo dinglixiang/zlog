@@ -9,7 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
-gem "ckeditor"
+gem "ckeditor", github: "dinglixiang/ckeditor"
 gem "carrierwave"
 gem "mini_magick"
 gem "non-stupid-digest-assets"
