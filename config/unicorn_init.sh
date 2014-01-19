@@ -11,9 +11,10 @@
 set -e
  
 # Feel free to change any of the following variables for your app:
-#AS_USER=deployer
+AS_USER=ding
 TIMEOUT=${TIMEOUT-60}
-APP_ROOT=/var/www/zlog/current
+APP_ROOT=/home/ding/apps/zlog/current
+#APP_ROOT=/var/www/zlog/current
 PID=$APP_ROOT/tmp/pids/unicorn.pid
 CMD="cd $APP_ROOT; bundle exec unicorn -D -c $APP_ROOT/config/unicorn.rb -E production"
 set -u

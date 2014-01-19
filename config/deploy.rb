@@ -7,7 +7,7 @@ set :application, "zlog"
 set :user, "ding"
 set :port, 22
 set :use_sudo,false 
-set :deploy_to, "/var/www/#{application}"
+set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
 set :rvm_type, :system
 
@@ -31,7 +31,7 @@ namespace :deploy do
  
   desc "things I need to do after deploy:setup"
   task :setup_config, :roles => :app do
-    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    run "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
     put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}. create db"
