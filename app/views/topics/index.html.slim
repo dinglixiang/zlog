@@ -1,0 +1,16 @@
+.col-xs-9
+  - @topics.each do |topic|
+    article
+      h3
+        = link_to topic.title, topic
+      h6
+        small
+          | Written by 
+          a[href="#"]
+            | Lixiang Ding
+          |  on 
+          = topic.created_at.strftime("%b %d, %Y")
+          | .
+      p
+        = topic.content
+    hr

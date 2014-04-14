@@ -13,6 +13,7 @@ gem "ckeditor", '~> 4.0.6'
 gem "carrierwave"
 gem "mini_magick"
 gem "non-stupid-digest-assets"
+gem "slim-rails"
 #foundation
 #gem "zurb-foundation", "~> 4.3.2"
 #gem 'foundation-rails'
