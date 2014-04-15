@@ -1,5 +1,5 @@
-#source 'http://ruby.taobao.org'
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
+#source 'https://rubygems.org'
 
 gem 'rails', '4.0.1'
 
@@ -24,8 +24,14 @@ gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
+end
+
 group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
@@ -34,10 +40,8 @@ end
 
 # Use unicorn as the app server
 gem 'unicorn'
-
-# Use Capistrano for deployment
 gem 'capistrano', group: :development
-gem 'rvm-capistrano'
+gem 'rvm-capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
