@@ -1,7 +1,7 @@
 source 'http://ruby.taobao.org'
 #source 'https://rubygems.org'
 
-gem 'rails', '4.0.1'
+gem 'rails', '4.0.4'
 
 gem 'mysql2', '~> 0.3.13'
 gem 'sass-rails', '~> 4.0.0'
@@ -29,6 +29,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl'
   gem 'factory_girl_rails'
+  gem 'cucumber'
 end
 
 group :doc do
