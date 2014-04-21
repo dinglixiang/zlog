@@ -1,0 +1,10 @@
+= form_for [@topic, @topic.comments.build] do |f|
+  p
+    = f.label "Commenter:"
+  p
+    = f.text_field :commenter
+  p
+    = f.label "Content:"
+  p
+    = f.text_area :body
+  = f.submit "Submit"

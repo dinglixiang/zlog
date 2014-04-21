@@ -8,18 +8,8 @@
   hr
   .container
     p Comments:
-    - @topic.comments.each do |comment|
-      = comment.commenter
-      = comment.body
-      br
-    hr
-    = form_for [@topic, @topic.comments.build] do |f|
-      p
-        = f.label :commenter
-        = f.text_field :commenter
-      p
-        = f.label :body
-        = f.text_area :body
-      = f.submit
+    = render @topic.comments
+    br
+    = render "comments/form"
   = link_to 'Back', topics_path
   hr
