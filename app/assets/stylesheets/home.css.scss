@@ -1,3 +1,36 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com
+
+.new-background {
+  background: #bebebe;
+}
+
+article {
+  margin-bottom: 20px;
+  background: #ffffff;
+  font-family: Arial;
+  border: 1px solid #dedede;
+  -moz-border-renderadius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 15px 25px;
+  height: inherit;
+  /*width: 590px;*/
+}
+
+/*article h1 {*/
+  /*font-size: 28px;*/
+  /*overflow: hidden;*/
+  /*white-space: nowrap;*/
+  /*text-overflow: ellipsis;*/
+  /*color: #000;*/
+  /*padding-bottom: 10px;*/
+/*}*/
+
+.footer {
+  text-align: center;
+  background: #fff;
+  height: 70px;
+  padding-top: 30px;
+  box-shadow: 0px -1px 1px #aaa;
+}

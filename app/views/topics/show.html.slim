@@ -1,10 +1,10 @@
-.col-xs-9
+article.col-xs-9
   .topic_title[align="center"]
-    p
+    h3
       = @topic.title
   .topic_content
     p
-      = @topic.content
+      = raw @topic.content
   hr
   .container
     p Comments:

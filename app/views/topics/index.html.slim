@@ -6,11 +6,10 @@
       h6
         small
           | Written by 
-          a[href="#"]
+          a[href="/about"]
             | Lixiang Ding
           |  on 
           = topic.created_at.strftime("%b %d, %Y")
           | .
       p
-        = topic.content
-    hr
+        = raw topic.content

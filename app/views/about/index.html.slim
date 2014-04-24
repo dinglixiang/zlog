@@ -1,0 +1,6 @@
+article
+  - if @about.blank?
+    h3
+      | The author does not introduce him, pls waiting.
+  - else
+    = raw @about.body

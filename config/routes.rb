@@ -2,6 +2,9 @@ Zlog::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
   root "topics#index"
+  
+  match 'about' => "about#index", via: :get
+  resource :about, controller: 'about'
 
   resources :topics do
     resources :comments
