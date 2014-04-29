@@ -41,7 +41,7 @@ end
 
 # Use unicorn as the app server
 gem 'unicorn'
-gem 'capistrano', group: :development
+gem 'capistrano', '~> 2.15.1', group: :development
 gem 'rvm-capistrano', group: :development
 
 # Use debugger
