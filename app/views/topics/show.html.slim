@@ -2,6 +2,14 @@ article.col-xs-9
   .topic_title[align="center"]
     h3
       = @topic.title
+    h6
+      small
+        | Written by 
+        a[href="/about"]
+          | Lixiang Ding
+        |  on 
+        = @topic.created_at.strftime("%b %d, %Y")
+        | .
   .topic_content
     p
       = raw @topic.content
